@@ -12,7 +12,7 @@ export const CelebrityProfile = ({celebrity}) => {
     //Variable para determinar si esta en una lista o grilla 
     //Metodo para manejar el cambio de grilla a lista 
 
-    const {name,description,category,picture,lastUpdated,votes:{positive,negative}}= celebrity;
+    const {name,description,picture}= celebrity;
     const image = require(`../../images/${picture}`);
     const {
         status,

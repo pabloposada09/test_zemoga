@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from 'react'
+import { updateCelebrity } from '../helpers/getCelebrities';
 
 export const useCelebrity = (celebrity) => {
     
 
-    const {name,description,category,picture,lastUpdated,votes:{positive,negative}}=celebrity;   
+    const {celebritie_id,name,description,category,picture,lastUpdated,votes:{positive,negative}}=celebrity;   
 
     //variable to manage the positiveVotesIncrement
     const [positiveVotes, setPositiveVotes] = useState(positive);
@@ -44,6 +45,7 @@ export const useCelebrity = (celebrity) => {
 
     //Method to handle the vote action
     const handleVote = (e)=>{
+
         if(!vote){
             if(selection===""){
                 alert("Debe seleccionar una opcion");
@@ -53,17 +55,21 @@ export const useCelebrity = (celebrity) => {
                        return value+1;
                    });
                    unCheckButton("choice1");
+                   
+                    updateCelebrity(celebritie_id,positiveVotes+1,negativeVotes);
 
                 }else if(selection==="dislike"){
                    setNegativeVotes((value)=>{
                         return value+1;
                     });
                     unCheckButton("choice2");
+                    
+                    updateCelebrity(celebritie_id,positiveVotes,negativeVotes+1);
                 }
                 
                 setVote(true);
                 setDateInfo("Thank you for your vote");
-                //callMethod to update database in aws
+
             }
         }else{
 
@@ -82,9 +88,6 @@ export const useCelebrity = (celebrity) => {
         setPositivePercentage(positiveP.toFixed(2));
         setNegativePercentage(negativeP.toFixed(2));
 
-        console.log(name);
-        console.log(positiveP)
-        console.log(negativeP);
     }
 
 

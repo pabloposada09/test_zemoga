@@ -1,10 +1,13 @@
-import React from 'react'
-import './profilesContainer.css'
+import React from 'react';
+import './profilesContainer.css';
 
-import { celebrities } from '../../data/celebrities'
-import { CelebrityProfile } from '../celebrityProfile/CelebrityProfile'
-
+import { CelebrityProfile } from '../celebrityProfile/CelebrityProfile';
+import { useProfileContainer } from '../../hooks/useProfileContainer';
 export const ProfilesContainer = () => {
+
+
+    const {celebrities} = useProfileContainer();
+
     return (
         <section>
             {/* div para el titulo junto con el menu para cambiar el tipo de vista  */}
