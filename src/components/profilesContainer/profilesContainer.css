@@ -1,0 +1,11 @@
+.celebritiesContainer{
+    height: 317px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+.celebritiesContainer::-webkit-scrollbar{
+    width: 0;
+}
+

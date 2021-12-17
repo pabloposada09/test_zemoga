@@ -105,7 +105,7 @@
     align-items: center;
     justify-content: flex-end;
     padding: 0 .25rem 0 0;
-    background-color: var(--color-dark-background);
+    background-color: var(--color-green-positive);
     color: var(--color-white);
     font-weight: 300;
     text-transform: uppercase;
