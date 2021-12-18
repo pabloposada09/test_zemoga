@@ -1,11 +1,73 @@
-.celebritiesContainer{
+.celebritiesContainerGrid{
     height: 317px;
     display: flex;
     overflow-x: scroll;
 }
 
-
-.celebritiesContainer::-webkit-scrollbar{
+.celebritiesContainerGrid::-webkit-scrollbar{
     width: 0;
 }
 
+.celebritiesContainerList{
+    height: 317px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.celebritiesContainerList::-webkit-scrollbar{
+    width: 0;
+}
+
+
+section div span#selectionDrop{
+    display: none;
+}
+
+@media all and (min-width: 768px) {
+    section div h2{
+        display: inline-block;
+        margin: 28px,0px,28px, 21px;
+    }
+
+    section div span#selectionDrop{
+        display: block;
+        float: right;
+        margin-right: 15px;
+        margin-top: 3%;
+    }
+
+    .celebritiesContainerGrid{
+        display: inline-block;
+        height: auto;
+    }
+
+    .celebritiesContainerList{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .selection{
+        background-color: transparent;
+        border: 2px solid black;
+        width: 150px;
+        height: 35px;
+        text-align: center;
+    }
+    
+}
+
+
+@media all and (min-width: 1100px) {
+    
+
+    section div span#selectionDrop{
+        display: block;
+        float: right;
+        margin-right: 20px;
+        margin-top: 3%;
+    }
+
+    
+}

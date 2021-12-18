@@ -4,6 +4,11 @@ import { getCelebrities } from '../helpers/getCelebrities';
 export const useProfileContainer = () => {
     
     const [celebrities, setCelebrities] = useState([]);
+    const [view, setView] = useState("grid");
+
+    const handleSelection =(e)=>{
+        setView(e.target.value);
+    }
 
     useEffect(() => {
         (async () => {
@@ -13,6 +18,9 @@ export const useProfileContainer = () => {
     },[])
 
     return{
-        celebrities
+        celebrities,
+        view,
+        setView,
+        handleSelection
     }
 }

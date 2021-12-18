@@ -4,7 +4,7 @@ import { updateCelebrity } from '../helpers/getCelebrities';
 export const useCelebrity = (celebrity) => {
     
 
-    const {celebritie_id,name,description,category,picture,lastUpdated,votes:{positive,negative}}=celebrity;   
+    const {celebritie_id,name,description,category,picture,lastUpdate,votes:{positive,negative}}=celebrity;   
 
     //variable to manage the positiveVotesIncrement
     const [positiveVotes, setPositiveVotes] = useState(positive);
@@ -28,6 +28,7 @@ export const useCelebrity = (celebrity) => {
 
     //Variable to manage the date 
     const [dateInfo, setDateInfo] = useState("");
+
 
     
 
@@ -94,12 +95,13 @@ export const useCelebrity = (celebrity) => {
     //Method to update the dateMessage
     const calculateDate=()=>{
         if(!vote){
-            const lastDate = new Date(lastUpdated);
+            const lastDate = new Date(lastUpdate);
             const date = new Date();
 
             const yearDif = date.getFullYear() - lastDate.getFullYear();
             const monthDif = (date.getMonth()+1) - (lastDate.getMonth()+1);
             const dayDif = date.getDate() - lastDate.getDate();
+
 
             if(yearDif >=1){
                 yearDif==1? setDateInfo(`${Math.round(yearDif)} year ago in ${category}`):setDateInfo(`${Math.round(yearDif)} years ago in ${category}`);
@@ -132,7 +134,8 @@ export const useCelebrity = (celebrity) => {
         negativePercentage,
         dateInfo,
         handleSelection,
-        handleVote
+        handleVote,
+        selection
     };
 
 }
