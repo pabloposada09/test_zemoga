@@ -17,8 +17,8 @@ export const ProfilesContainer = () => {
                 <span id='selectionDrop'>
                     <form action="#">
                         <select name="presentation" id="options" className='selection' onChange={(e)=>{handleSelection(e)}}>
-                            <option value="grid" >Grid</option>
-                            <option value="list" >List</option>                            
+                            <option value="grid" className='selection'>Grid</option>
+                            <option value="list" className='selection'>List</option>                            
                         </select>
                     </form>
                 </span>

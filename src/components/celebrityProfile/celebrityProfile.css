@@ -301,6 +301,8 @@ input[type=radio] + label>img {
         visibility: visible;
     }
 
+    
+
     .voteButton{
         padding: 10px 20px 10px 20px ;
     }
@@ -418,10 +420,15 @@ input[type=radio] + label>img {
     }
 
     .celebrityVoteList .voteAgainButton{
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
         position: absolute;
-        margin-left: 40%;
-        margin-top: -4%;
-        width: 250px;
+        margin-left: 35%;
+        margin-top: -2%;
+        cursor: pointer;
+        border: 2px solid white;
+        margin-right: 5%;
+        width: 10%;
     }
     
 
@@ -476,10 +483,7 @@ input[type=radio] + label>img {
     
     
 
-    .voteButton{
-        padding: 10px 20px 10px 20px ;
-    }
-
+   
 
     .closing-gauge__left img{
         position: absolute;
@@ -497,9 +501,7 @@ input[type=radio] + label>img {
         display: inline-block;
     }
 
-    .celebrityVote{
-        margin-top: 65%;
-    }
+
 
     .celebrityDescriptionList h3{
         vertical-align: text-bottom;
@@ -542,4 +544,21 @@ input[type=radio] + label>img {
         top: -3.8vw
         
     }
+
+    .celebrityVoteList .voteButton{
+        padding: 10px 20px 10px 20px ;
+    }
+
+    .celebrityVoteList .voteAgainButton{
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        position: absolute;
+        margin-left: 35%;
+        margin-top: -2%;
+        cursor: pointer;
+        border: 2px solid white;
+        margin-right: 5%;
+        width: 10%;
+    }
+
 }

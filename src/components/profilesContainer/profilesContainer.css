@@ -49,7 +49,15 @@ section div span#selectionDrop{
 
 
     .selection{
-        background-color: transparent;
+        background-color: white;
+        border: 2px solid black;
+        width: 150px;
+        height: 35px;
+        text-align: center;
+    }
+
+    select::after{
+        background-color: white;
         border: 2px solid black;
         width: 150px;
         height: 35px;

@@ -48,8 +48,8 @@ export const CelebrityProfile = ({celebrity,view}) => {
                     style={{visibility:`${vote?'hidden':'visible'}`}}
                 />
                 
-                <label htmlFor="like" id="lblLike" style={{display:`${vote?'none':'inline-block'}`}} >
-                    <img src={thumbsUp}  className='likeButton'/>
+                <label htmlFor="like" id="lblLike" >
+                    <img src={thumbsUp}  className='likeButton' style={{opacity:`${vote?'0':'100'}`}}/>
                 </label>
                     <input 
                         id ="dislike"
@@ -60,8 +60,8 @@ export const CelebrityProfile = ({celebrity,view}) => {
                         onChange={(e)=>{handleSelection(e)}}
                         style={{visibility:`${vote?'hidden':'visible'}`}}
                         />
-                <label htmlFor="dislike" id="lbldisLike" style={{display:`${vote?'none':'inline-block'}`}}>
-                    <img src={thumbsDown} className='dislikeButton'/>
+                <label htmlFor="dislike" id="lbldisLike">
+                    <img src={thumbsDown} className='dislikeButton'style={{opacity:`${vote?'0':'100'}`}}/>
                 </label>
 
                 <button className={`${vote?'voteAgainButton':'voteButton'}`} onClick={(e)=>{handleVote(e)}}>{vote?"Vote again":"Vote"}</button>
