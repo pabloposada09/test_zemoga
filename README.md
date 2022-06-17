@@ -1,4 +1,5 @@
-# Prueba técnica Zemoga 
+# Prueba técnica Zemoga pull request
+
 
 El presente proyecto tiene como objetivo dar cumplimiento a la prueba técnica de Front End en la empresa Zemoga. Su desarrollo se llevo a cabo con ayuda del framework React.js, así mismo para el manejo de la información de las "Celebridades" a votar se creo una base de datos MariaDB en Amazon Web Services y se llevo a cabo la respectiva conexión para poder consultar y actualizar los registros.
 
